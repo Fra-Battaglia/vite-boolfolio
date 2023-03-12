@@ -18,13 +18,7 @@
 
 <template>
 	<main>
-		<div class="container text-white">
-			<div v-for="item in projects" :key="item.id">
-				<h3>{{ item.title }}</h3>
-				<p>{{ item.content }}</p>
-				<img :src="baseUrl + 'storage/' + item.cover_image" alt="" class="project-image">
-			</div>
-		</div>
+		<RouterView />
 	</main>
 </template>
 

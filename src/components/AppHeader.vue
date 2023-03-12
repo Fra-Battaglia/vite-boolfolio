@@ -1,4 +1,5 @@
 <script>
+
 	export default {
 
 		data() {
@@ -8,7 +9,7 @@
 		},
 
 		components: {
-
+			
 		},
 
 		methods: {
@@ -22,9 +23,8 @@
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col d-flex gap-3">
-					<a href="#">Prova</a>
-					<a href="#">Prova</a>
-					<a href="#">Prova</a>
+					<router-link to="/">Home</router-link>
+    				<router-link to="/portfolio">Portfolio</router-link>
 				</div>
 			</div>
 		</div>
