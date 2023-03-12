@@ -18,12 +18,18 @@
 
 <template>
 	<main>
-		<div v-for="item in projects" :key="project.id">
-			<h3>{{ item.title }}</h3>
+		<div class="container text-white">
+			<div v-for="item in projects" :key="item.id">
+				<h3>{{ item.title }}</h3>
+				<p>{{ item.content }}</p>
+				<img :src="baseUrl + 'storage/' + item.cover_image" alt="" class="project-image">
+			</div>
 		</div>
 	</main>
 </template>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+	img.project-image {
+		width: 300px;
+	}
 </style>

@@ -18,11 +18,30 @@
 </script>
 
 <template>
-	<header>
-		header
+	<header class="position-absolute top-0 d-flex align-items-center w-100">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col d-flex gap-3">
+					<a href="#">Prova</a>
+					<a href="#">Prova</a>
+					<a href="#">Prova</a>
+				</div>
+			</div>
+		</div>
 	</header>
 </template>
 
 <style lang="scss" scoped>
 
+	@use '../styles/partials/variables' as *;
+	@use '../styles/partials/mixins' as *;
+
+	header {
+		height: 80px;
+
+		a {
+			color: $light-color;
+			text-decoration: none;
+		}
+	}
 </style>

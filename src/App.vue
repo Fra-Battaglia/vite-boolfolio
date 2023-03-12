@@ -1,5 +1,6 @@
 <script>
 	import AppHeader from './components/AppHeader.vue';
+	import AppJumbotron from './components/AppJumbotron.vue';
 	import AppMain from './components/AppMain.vue';
 	import AppFooter from './components/AppFooter.vue'
 	
@@ -13,6 +14,7 @@
 
 	components: {
 		AppHeader,
+		AppJumbotron,
 		AppMain,
 		AppFooter
 	},
@@ -24,6 +26,7 @@
 </script>
 
 <template>
+	<AppJumbotron />
 	<AppHeader />
 	<AppMain />
 	<AppFooter />
@@ -31,4 +34,11 @@
 
 <style lang="scss">
 	@use './styles/_general.scss' as *;
+	@use './styles/partials/variables' as *;
+	@use './styles/partials/mixins' as *;
+
+	body {
+		background-color: $dark-color;
+		font-family: 'Montserrat', sans-serif;
+	}
 </style>
