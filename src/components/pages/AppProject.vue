@@ -5,8 +5,7 @@
 
 	data() {
         return {
-			name: App,
-            baseUrl: 'http://127.0.0.1:8000/',
+            baseUrl: 'http://127.0.0.1:8000',
 			loading: true,
 			project: null
         }
