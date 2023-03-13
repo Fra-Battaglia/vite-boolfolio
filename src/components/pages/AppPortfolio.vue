@@ -23,13 +23,15 @@
 <template>
 	<div class="portfolio py-5">
 		<div class="container text-white">
-			<div v-for="item in projects" :key="item.id">
-				<div class="card bg-transparent border-white w-25">
-					<img :src="baseUrl + 'storage/' + item.cover_image" alt="" class="project-image d-block card-img-top">
-					<div class="card-body">
-						<h3>{{ item.title }}</h3>
-						<p>{{ item.content }}</p>
-						<router-link :to="'/portfolio/' + item.slug" class="btn btn-warning mt-3">Vedi progetto</router-link>
+			<div class="row">
+				<div v-for="item in projects" :key="item.id" class="col-3 my-3">
+					<div class="card bg-transparent border-white px-0">
+						<img :src="baseUrl + 'storage/' + item.cover_image" alt="" class="project-image d-block card-img-top my-ratio-16-9">
+						<div class="card-body border-top">
+							<h3>{{ item.title }}</h3>
+							<p>{{ item.content }}</p>
+							<router-link :to="'/portfolio/' + item.slug" class="btn btn-outline-warning mt-3">Vedi progetto</router-link>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -38,4 +40,8 @@
 </template>
 
 <style lang="scss">
+	.my-ratio-16-9 {
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+	}
 </style>

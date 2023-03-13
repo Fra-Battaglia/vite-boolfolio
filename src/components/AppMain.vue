@@ -23,7 +23,5 @@
 </template>
 
 <style lang="scss">
-	img.project-image {
-		width: 300px;
-	}
+	
 </style>
