@@ -24,6 +24,11 @@
 	<div class="portfolio py-5">
 		<div class="container text-white">
 			<div class="row">
+				<div class="col">
+					<h1>Portfolio</h1>
+				</div>
+			</div>
+			<div class="row">
 				<div v-for="item in projects" :key="item.id" class="col-3 my-3">
 					<div class="card bg-transparent border-white px-0">
 						<img :src="baseUrl + 'storage/' + item.cover_image" alt="" class="project-image d-block card-img-top my-ratio-16-9">

@@ -26,21 +26,23 @@
 </script>
 
 <template>
+	<AppJumbotron />
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col py-5">
 				<h1>HOMEPAGE</h1>
 			</div>
 		</div>
 	</div>	
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	@use '../../styles/partials/variables' as *;
 	@use '../../styles/partials/mixins' as *;
 
-	body {
-		background-color: $dark-color;
-		font-family: 'Montserrat', sans-serif;
+	header {
+		position: absolute;
+		top: 0;
+		background-color: transparent;
 	}
 </style>

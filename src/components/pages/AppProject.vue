@@ -38,19 +38,32 @@
 </script>
 
 <template>
-	<div v-if="project">
-		  <img :src="project.cover_image != null ? `${baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/200/300'" class="card-img-top">
-		  <h2>{{ project.title }}</h2>
-		  <p>{{ project.content }}</p>
-		  <p>{{ project.type.name }}</p>
-		  <span v-for="technology in project.technologies" :key="technology.id">
-			{{technology.name}}
-		  </span>
-	 </div>
-	<div v-else>
-		  <p>Loading...</p>
+	<div class="container">
+		<div v-if="project">
+			  <img :src="project.cover_image != null ? `${baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/200/300'" class="img-fluid">
+
+			  <div class="project-content py-5">
+				  <h2>{{ project.title }}</h2>
+				  <p>{{ project.content }}</p>
+				  <p>{{ project.type.name }}</p>
+				  <p>
+					  <span v-for="technology in project.technologies" :key="technology.id" class="technology">
+						{{technology.name}}
+					  </span>
+				  </p>
+			  </div>
+		 </div>
+		<div v-else>
+			  <p>Loading...</p>
+		</div>
 	</div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+	.technology::after {
+		content: ', ';
+	}
+	.technology:last-child::after {
+		content: '';
+	}
 </style>

@@ -25,8 +25,7 @@
 	}
 </script>
 
-<template>
-	<AppJumbotron />
+<template>	
 	<AppHeader />
 	<AppMain />
 	<AppFooter />

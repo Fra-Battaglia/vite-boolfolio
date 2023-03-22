@@ -19,12 +19,13 @@
 </script>
 
 <template>
-	<header class="position-absolute top-0 d-flex align-items-center w-100">
+	<header class="d-flex align-items-center w-100">
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col d-flex gap-3">
 					<router-link to="/">Home</router-link>
     				<router-link to="/portfolio">Portfolio</router-link>
+    				<router-link to="/contacts">Contacts</router-link>
 				</div>
 			</div>
 		</div>
@@ -38,6 +39,7 @@
 
 	header {
 		height: 80px;
+		background-color: $dark-color;
 
 		a {
 			color: $light-color;
